@@ -1,16 +1,43 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Vector;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> values = new ArrayList<>();
-        values.add(3);
-        values.add(77);
-        values.add(88);
+        Vector<Integer> v = new Vector<>();
+        v.add(4);
+        v.add(7);
+        v.add(6);
+        v.add(20);
+        v.add(4);
+        v.add(20);
+        v.add(4);
+        v.add(20);
+        v.add(4);
+        v.add(2);
+        v.add(65);
+        v.add(7);
+        v.add(14);
+        v.add(22);
+        v.add(4);
+        v.add(30);
+        v.add(4);
+        v.add(20);
+        v.add(4);
+        v.add(20);
+        v.add(4);
+        v.add(20);
+        v.add(4);
+        v.add(20);
 
-        values.add(1,9);
 
-        for (int i : values)
+
+        Collections.sort(v);
+
+        for (int i : v)
             System.out.println(i);
+
+        System.out.println();
+
+        System.out.println(v.capacity());
     }
 }
