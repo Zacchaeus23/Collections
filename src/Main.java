@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 
 class Container<T extends Number> {
     T value;
@@ -14,6 +14,10 @@ class Container<T extends Number> {
     public void show(){
         System.out.println(value.getClass().getName());
     }
+
+    public void demo(ArrayList<? extends T> obj){
+
+    }
 }
 public class Main {
     public static void main(String[] args) {
@@ -22,5 +26,6 @@ public class Main {
         obj.value = 9;
 
         obj.show();
+        obj.demo(new ArrayList<>());
     }
 }
