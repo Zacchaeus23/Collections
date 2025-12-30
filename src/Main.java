@@ -1,31 +1,17 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 
-class Container<T extends Number> {
-    T value;
-
-    public T getValue() {
-        return value;
-    }
-
-    public void setValue(T value) {
-        this.value = value;
-    }
-
-    public void show(){
-        System.out.println(value.getClass().getName());
-    }
-
-    public void demo(ArrayList<? extends T> obj){
-
-    }
-}
 public class Main {
     public static void main(String[] args) {
-        Container<Integer> obj = new Container<>();
+        Collection values = new ArrayList();
+        values.add(3);
+        values.add("Zack");
+        values.add(5.8f);
 
-        obj.value = 9;
-
-        obj.show();
-        obj.demo(new ArrayList<>());
+        Iterator i = values.iterator();
+        System.out.println(i.next());
+        System.out.println(i.next());
+        System.out.println(i.next());
     }
 }
