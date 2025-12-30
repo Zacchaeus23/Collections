@@ -8,10 +8,13 @@ public class Main {
         values.add(3);
         values.add("Zack");
         values.add(5.8f);
+        values.add(77);
 
-        Iterator i = values.iterator();
-        System.out.println(i.next());
-        System.out.println(i.next());
-        System.out.println(i.next());
+//        Iterator i = values.iterator();
+//        while (i.hasNext())
+//            System.out.println(i.next());
+
+        for (Object i : values)
+            System.out.println(i);
     }
 }
